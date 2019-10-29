@@ -1,0 +1,9 @@
+.ToDo-true {
+    padding: 10px;
+    text-decoration: line-through;
+}
+.ToDo-false {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
