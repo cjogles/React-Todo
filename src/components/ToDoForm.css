@@ -1,0 +1,9 @@
+.ToDoForm {
+    padding-top: 1rem;
+}
+button {
+    background: lightskyblue;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+}
