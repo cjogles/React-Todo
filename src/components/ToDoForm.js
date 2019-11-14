@@ -29,7 +29,7 @@ onSubmit = (e) => {
                         value={this.state.newTask} 
                     />
                     <button>
-                        Add
+                        Add Task
                     </button>
                 </form>
             </div>
