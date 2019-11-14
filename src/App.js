@@ -52,7 +52,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h2>Do It and Be Cool!</h2>
+        <h2>React To-Do List</h2>
         <ToDoList 
           data={this.state.data} 
           toggle={this.toggle}
