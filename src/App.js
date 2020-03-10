@@ -4,19 +4,35 @@ import ToDoForm from './components/ToDoForm';
 import './App.css'
 
 class App extends React.Component {
-
-  state = {data: [
-    {
-      title: 'Organize Garage',
-      id: 1528817077286,
-      completed: false
-    },
-    {
-      title: 'Bake Cookies',
-      id: 1528817084358,
-      completed: false
+  
+  constructor(props) {
+    super(props)
+    this.state = {data: [
+      {
+        title: "example task",
+        id: 123456789,
+        completed: false
+      }
+    ]}
+  }
+  
+  componentDidMount(){
+    if(this.state === null || this.state === undefined) {
+      this.state = {data: [
+        {
+          title: "example task",
+          id: 123456789,
+          completed: false
+        }
+      ]}
+    } else {
+      this.setState(JSON.parse(window.localStorage.getItem('tasks')))
     }
-  ]}
+  }
+
+  componentDidUpdate(){
+    window.localStorage.setItem('tasks', JSON.stringify(this.state.data))
+  }
 
   addTask = taskName => {
     const newTask = {
@@ -33,6 +49,7 @@ class App extends React.Component {
     let newArr = [...this.state.data];
     let result = newArr.filter(task => task.completed === false );
     this.setState({data: result})
+    // window.localStorage.setItem("tasks", JSON.stringify(this.state.data));
   }
 
   toggle = (id) => {

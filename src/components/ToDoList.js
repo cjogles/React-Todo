@@ -3,10 +3,10 @@ import ToDo from './ToDo';
 import './ToDoList.css'
 
 class ToDoList extends React.Component {
-
     render () {
         return (
             <div className="ToDoList">
+                {/* {console.log(this.props.data)} */}
                 {this.props.data.map(task => (
                     <ToDo 
                         id={task.id}
